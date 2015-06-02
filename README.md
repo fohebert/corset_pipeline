@@ -39,7 +39,7 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 **Procedure**<br>
 * Script file for the job can edited using vim:<br>
 `vi 01_scripts/01.trimming.sh`
-<br><br>
+<br>
 This script will create one trimming script file for each library present in the directory 02_raw_data.<br>
 Each library will be trimmed independently according to the parameters entered in the general script file (`01.trimming.sh`).<br>
 
@@ -56,3 +56,7 @@ Each library will be trimmed independently according to the parameters entered i
 **Description**: takes the trimmed files, concatenates them (for better transcript detection) and assemble all the reads into transcripts.<br>
 
 **Procedure**<br>
+* Again, script file can be changed according to your needs and data:<br>
+`vi 01_scripts/02.trinity.sh`
+
+* d
