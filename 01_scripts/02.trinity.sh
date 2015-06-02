@@ -1,38 +1,26 @@
 #!/bin/bash
+# Assembling the trimmed data using Trinity
 
-### Global variables (modify as needed)
-NORMALIZED_FOLDER="04_normalized"
-ASSEMBLY_FOLDER="05_trinity_output"
+#GLOBAL VARIABLES
+TRIMMED_READS="03_trimmed"
+TRIN_OUT="04_trinity_output"
 
-# Assembly with Trinity 
-# min_kmer_cov 2 improves rapidity of assembly but is not recommended
-echo 
-echo "################################################"
-echo "# Writing output to: '$OUTPUT_DIR'"
-echo "################################################"
-echo 
+# Re-group all the reads for a better transcript detection
+cat $TRIMMED_READS/*.R1.trim.paired.fastq >$TRIMMED_READS/all-reads.R1.fastq
+cat $TRIMMED_READS/*.R2.trim.paired.fastq >$TRIMMED_READS/all-reads.R2.fastq
 
-# Remove output directory
-rm -r $OUTPUT_DIR 2> /dev/null
-
-# Launch Trinity
+# Running Trinity to assemble de novo the transcripts
 Trinity \
+    --bypass_java_version_check \
+    --max_memory 70G \
+    --CPU 10 \
     --seqType fq \
-    --JM 160G \
-    --CPU 20 \
-    --left $NORMALIZED_FOLDER/left_for_trinity.fq.gz \
-    --right $NORMALIZED_FOLDER/right_for_trinity.fq.gz \
-    --min_contig_length 200 \
-    --min_kmer_cov 1 \
-    --output $ASSEMBLY_FOLDER
-    #--no_run_quantifygraph \
-    #--no_run_chrysalis \
+    --left $TRIMMED_READS/all-reads.R1.fastq \
+    --right $TRIMMED_READS/all-reads.R2.fastq \
+    --min_contig_length 150 \
+    --output $TRIN_OUT
 
-# Get scaffolds and cleanup space (optional)
-mv $ASSEMBLY_FOLDER/Trinity.fasta .
-rm -r $ASSEMBLY_FOLDER/* 2> /dev/null
-mv Trinity.fasta $ASSEMBLY_FOLDER
-
-# Indicate that the trinity assembly is done
-touch finished.03_trinity
-
+# Getting rid of the numerous output files
+mv $TRIN_OUT/Trinity.fasta .
+rm -r $TRIN_OUT/* 2> /dev/null
+mv Trinity.fasta $TRIN_OUT
