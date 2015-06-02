@@ -1,4 +1,5 @@
 # Assembly Pipeline from Illumina paired-end data
+**NOTE**:
 *This pipline uses raw read files to trim and assemble RNA-seq data, while correcting for redundancy in the dataset*
 
 *** VERY IMPORTANT ***
