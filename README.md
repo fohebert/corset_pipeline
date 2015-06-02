@@ -42,3 +42,9 @@ Script file for the job can edited using vim:<br>
 <br><br>
 This script will create one trimming script file for each library present in the directory 02_raw_data.<br>
 Each library will be trimmed independently according to the parameters entered in the general script file (`01.trimming.sh`).<br><br>
+
+You can edit the job file to change the running time, RAM, number of CPUS:<br><br>
+`vi 01_scripts/jobs/01.trimming.job.template.sh`
+
+You are now ready to submit the job to KATAK:<br><br>
+`qsub 01_scripts/jobs/`
