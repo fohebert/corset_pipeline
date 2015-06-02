@@ -14,7 +14,7 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 
 ## OVERVIEW ##
 1) Read trimming; <br>
-2) **De novo** assembly using Trinity; <br>
+2) *De novo* assembly using Trinity; <br>
 3) Mapping trimmed reads on the reference generated with Trinity; <br>
 4) Use of CORSET to clusterize the transcript and correct for redundancy; <br>
 5) Mapping read files from multiple individuals to the reference; <br>
