@@ -37,3 +37,7 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 **Description**: cleans up read files according to sequencing quality thresholds and trims off sequencing adaptors.<br>
 
 **Procedure**<br>
+Script file for the job can edited using vim:<br>
+'vi 01_scripts/01.trimming.sh
+<br>
+sd
