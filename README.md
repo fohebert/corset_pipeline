@@ -31,4 +31,6 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 # General Instructions Before Beginning #
 * Run all the scripts (i.e. job files) from the main directory
 * Begin by placing your read files into the 02_raw_data directory
-* The job files are formatted according to the KATAK cluster requirements from Laval University (IBIS), you can edit them to fit any other cluster.
+* The job files are formatted according to the KATAK cluster requirements from Laval University (IBIS), but you can edit them to fit any other cluster.<br>
+
+# 1. Read Trimming #
