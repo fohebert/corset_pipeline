@@ -25,4 +25,3 @@ rm $TRIMMED/Trinity.fasta
 mv $TRIMMED/*.sam $OUT_DIR
 mv $TRIMMED/*.bam $OUT_DIR
 mv *.ebwt $OUT_DIR
-rm ./*-S_1 ./*-S_2
