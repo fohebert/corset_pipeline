@@ -63,5 +63,7 @@ Each library will be trimmed independently according to the parameters entered i
 * Submit the task to KATAK:<br>
 `qsub 01_scripts/jobs/02.trinity.jobs.sh`<br>
 
-# 3. Aligning all libraries to Trinity output #
-
+# 3. Map reads back to Trinity *de novo* reference #
+**Description**: uses `bowtie` to multi-map the reads of each library back to the reference generated with Trinity.<br>
+<br>
+**Procedure**<br>
