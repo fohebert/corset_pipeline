@@ -3,6 +3,7 @@
 *This pipline uses raw read files to trim and assemble RNA-seq data, while correcting for redundancy in the dataset*
 
 **VERSION**: v.0.1
+
 **DATE**: 02-06-2015
 
 ##Disclaimer##
