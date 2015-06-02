@@ -34,6 +34,6 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 * The job files are formatted according to the KATAK cluster requirements from Laval University (IBIS), but you can edit them to fit any other cluster.<br>
 
 # 1. Read Trimming #
-** Description **: cleans up read files according to sequencing quality thresholds and trims off sequencing adaptors.<br>
+**Description**: cleans up read files according to sequencing quality thresholds and trims off sequencing adaptors.<br>
 
-** Procedure **<br>
+**Procedure**<br>
