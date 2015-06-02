@@ -9,6 +9,8 @@
 This pipeline works well for a specific type of data on a specific cluster at Laval University. You might have to
 change certain lines of code in order to make it work, depending on the type of data and the name of the files.
 The various steps presented in this pipeline were mainly taken from the CORESET Google code page, you can find it 
-[here](https://code.google.com/p/corset-project/wiki/Example) Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
+[here](https://code.google.com/p/corset-project/wiki/Example). <br>
+Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 
-
+## OVERVIEW ##
+* 1) 
