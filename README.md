@@ -39,7 +39,6 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 **Procedure**<br>
 Script file for the job can edited using vim:<br>
 `vi 01_scripts/01.trimming.sh`
-<br>
+<br><br>
 This script will create one trimming script file for each library present in the directory 02_raw_data.<br>
-Each library will be trimmed independently according to the parameters entered in the general script file (`01.trimming.sh`).<br>
-
+Each library will be trimmed independently according to the parameters entered in the general script file (`01.trimming.sh`).<br><br>
