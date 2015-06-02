@@ -17,7 +17,6 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 2) *De novo* assembly using Trinity; <br>
 3) Mapping trimmed reads on the reference generated with Trinity; <br>
 4) Use of CORSET to clusterize the transcript and correct for redundancy; <br>
-5) Mapping read files from multiple individuals to the reference; <br>
 5) Obtain gene expression levels (raw counts) and use of EdgeR for downstream analyses <br>
 <br>
 
@@ -91,3 +90,4 @@ Each library will be trimmed independently according to the parameters entered i
 `qsub 01_scripts/jobs/04.corset.sh`<br>
 
 # 5. Run edgeR #
+**Description**: this step will allow the identification of gene-level expression counts. EdgeR will allow the identification of top differentially expressed clusters.<br>
