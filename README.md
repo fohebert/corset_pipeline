@@ -27,6 +27,7 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 * [Bowtie] (http://bowtie-bio.sourceforge.net/index.shtml)
 * [CORSET] (https://github.com/Oshlack/Corset/wiki)
 * [Samtools] (http://www.htslib.org/)<br>
+* [edgeR] (http://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
 
 ## General Instructions Before Beginning ##
 * Run all the scripts (i.e. job files) from the main directory
@@ -53,6 +54,7 @@ Each library will be trimmed independently according to the parameters entered i
 
 # 2. *De novo* assembly with Trinity #
 **Description**: takes the trimmed files, concatenates them (for better transcript detection) and assemble all the reads into transcripts.<br>
+**NOTE**: for a de novo reference transcriptome, it is recommended not to use too many libraries (i.e. individuals) because it has the potential to substantially increase the number of transcripts assembled (allele splitting into different contigs). As a consequence, it is better to use 1 library per developmental stage (or condition, depending on your study system), ideally the ones with the best sequencing depth.<br>
 
 **Procedure**<br>
 * Script file can be changed according to your needs and data:<br>
@@ -65,7 +67,7 @@ Each library will be trimmed independently according to the parameters entered i
 
 # 3. Map reads back to Trinity *de novo* reference #
 **Description**: uses `bowtie` to multi-map the reads of each library back to the reference generated with Trinity.<br>
-**NOTE**: it is crucial to MULTI-MAP the reeads back to the reference, i.e. multiple alignments per read. Corset will use this information to perform the clusterization and regroup contigs with similar sequences and similar expression levels.
+**NOTE**: it is crucial to MULTI-MAP the reads back to the reference, i.e. multiple alignments per read. Corset will use this information to perform the clusterization and regroup contigs with similar sequences and similar expression levels.
 
 **Procedure**<br>
 * Make sure everything is ok in the script file and the job file:<br>
@@ -79,3 +81,11 @@ Each library will be trimmed independently according to the parameters entered i
 **Description**: CORSET will clusterize contigs according to their sequence similarity and expression levels. It will generate a cluster file, containing the information of the number of clusters and the contigs in each one of them.<br>
 
 **Procedure**<br>
+* Make sure everything is ok in the script file and the job file:<br>
+`vi 01_scripts/jobs/04.corset.job.sh`<br>
+`vi 01_scripts/04.corset.sh`<br>
+<br>
+**NOTE**: here, we create groups with the libraries that correspond to experimental treatments or developmental stages. Every library has a group identifier (in this case letters representing developmental stages of a parasite) and a number that designates the individual library. So each library can be identified and assigned to a treatment/dev. stage. That way, CORSET has more power when splitting differentially expressed paralogs (-g option in the script file). The name of each library given in the CORSET command line (names after -n option) will appear in the header of the count files.
+
+* Job can then be submitted to KATAK:<br>
+`qsub 01_scripts/jobs/04.corset.sh`<br>
