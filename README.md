@@ -37,16 +37,16 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 **Description**: cleans up read files according to sequencing quality thresholds and trims off sequencing adaptors.<br>
 
 **Procedure**<br>
-Script file for the job can edited using vim:<br>
+* Script file for the job can edited using vim:<br>
 `vi 01_scripts/01.trimming.sh`
 <br><br>
 This script will create one trimming script file for each library present in the directory 02_raw_data.<br>
-Each library will be trimmed independently according to the parameters entered in the general script file (`01.trimming.sh`).<br><br>
+Each library will be trimmed independently according to the parameters entered in the general script file (`01.trimming.sh`).<br>
 
-You can edit the job file to change the running time, RAM, number of CPUS:<br>
+* You can edit the job file to change the running time, RAM, number of CPUS:<br>
 `vi 01_scripts/jobs/01.trimming.job.template.sh`
 
-You are now ready to start the job:<br>
+* You are now ready to start the job:<br>
 `01_scripts/01.trimming.sh`
 
 **NOTE**: usually, you should submit the jobs from the `01_scripts/jobs/` directory, but here, the script `01_scripts/01.trimming.sh` takes care of creating independent job files and submitting them to KATAK.<br>
