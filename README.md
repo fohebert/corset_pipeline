@@ -55,7 +55,7 @@ Each library will be trimmed independently according to the parameters entered i
 **Description**: takes the trimmed files, concatenates them (for better transcript detection) and assemble all the reads into transcripts.<br>
 
 **Procedure**<br>
-* Again, script file can be changed according to your needs and data:<br>
+* Script file can be changed according to your needs and data:<br>
 `vi 01_scripts/02.trinity.sh`
 <br><br>
 **note**: you might want to check for file name concordance in the script to make sure the job does not crash.
@@ -65,5 +65,13 @@ Each library will be trimmed independently according to the parameters entered i
 
 # 3. Map reads back to Trinity *de novo* reference #
 **Description**: uses `bowtie` to multi-map the reads of each library back to the reference generated with Trinity.<br>
-<br>
+
 **Procedure**<br>
+* Make sure everything is ok in the script file and the job file:<br>
+`vi 01_scripts/jobs/03.mapping.job.sh`<br>
+`vi 01_scripts/03.mapping.sh`<br>
+
+* Job can then be submitted to katak:<br>
+`qsub 01_scripts/jobs/03.mapping.sh`<br>
+
+# 4. Use CORSET to clusterize the numerous contigs assembled with Trinity #
