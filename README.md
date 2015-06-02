@@ -65,13 +65,17 @@ Each library will be trimmed independently according to the parameters entered i
 
 # 3. Map reads back to Trinity *de novo* reference #
 **Description**: uses `bowtie` to multi-map the reads of each library back to the reference generated with Trinity.<br>
+**NOTE**: it is crucial to MULTI-MAP the reeads back to the reference, i.e. multiple alignments per read. Corset will use this information to perform the clusterization and regroup contigs with similar sequences and similar expression levels.
 
 **Procedure**<br>
 * Make sure everything is ok in the script file and the job file:<br>
 `vi 01_scripts/jobs/03.mapping.job.sh`<br>
 `vi 01_scripts/03.mapping.sh`<br>
 
-* Job can then be submitted to katak:<br>
+* Job can then be submitted to KATAK:<br>
 `qsub 01_scripts/jobs/03.mapping.sh`<br>
 
 # 4. Use CORSET to clusterize the numerous contigs assembled with Trinity #
+**Description**: CORSET will clusterize contigs according to their sequence similarity and expression levels. It will generate a cluster file, containing the information of the number of clusters and the contigs in each one of them.<br>
+
+**Procedure**<br>
