@@ -12,7 +12,7 @@ The various steps presented in this pipeline were mainly taken from the CORESET 
 [here](https://github.com/Oshlack/Corset/wiki/Example). <br>
 Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 
-## OVERVIEW ##
+## Overview ##
 1) Read trimming; <br>
 2) *De novo* assembly using Trinity; <br>
 3) Mapping trimmed reads on the reference generated with Trinity; <br>
@@ -21,7 +21,7 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 5) Obtain gene expression levels (raw counts) and use of EdgeR for downstream analyses <br>
 <br>
 
-## REQUIRED PROGRAMS ##
+## Required Programs ##
 * [TRIMMOMATIC] (http://www.usadellab.org/cms/?page=trimmomatic)
 * [Trinity] (http://trinityrnaseq.github.io/)
 * [Bowtie] (http://bowtie-bio.sourceforge.net/index.shtml)
