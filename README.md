@@ -8,8 +8,8 @@
 ##Disclaimer##
 This pipeline works well for a specific type of data on a specific cluster at Laval University. You might have to
 change certain lines of code in order to make it work, depending on the type of data and the name of the files.
-The various steps presented in this pipeline were mainly taken from the CORESET Google code page, you can find it 
-[here](https://code.google.com/p/corset-project/wiki/Example). <br>
+The various steps presented in this pipeline were mainly taken from the CORESET github project page, you can find it 
+[here](https://github.com/Oshlack/Corset/wiki/Example). <br>
 Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 
 ## OVERVIEW ##
@@ -20,3 +20,11 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 5) Mapping read files from multiple individuals to the reference; <br>
 5) Obtain gene expression levels (raw counts) and use of EdgeR for downstream analyses <br>
 <br>
+
+## REQUIRED PROGRAMS ##
+* [TRIMMOMATIC] (http://www.usadellab.org/cms/?page=trimmomatic)
+* [Trinity] (http://trinityrnaseq.github.io/)
+* [Bowtie] (http://bowtie-bio.sourceforge.net/index.shtml)
+* [CORSET] (https://github.com/Oshlack/Corset/wiki)
+* [Samtools] (http://www.htslib.org/)<br>
+
