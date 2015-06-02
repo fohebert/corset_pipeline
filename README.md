@@ -38,6 +38,6 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 
 **Procedure**<br>
 Script file for the job can edited using vim:<br>
-'vi 01_scripts/01.trimming.sh'
+`vi 01_scripts/01.trimming.sh`
 <br>
 sd
