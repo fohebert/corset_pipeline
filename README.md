@@ -50,7 +50,6 @@ Each library will be trimmed independently according to the parameters entered i
 <br>`01_scripts/01.trimming.sh`
 
 **NOTE**: usually, you should submit the jobs from the `01_scripts/jobs/` directory, but here, the script `01_scripts/01.trimming.sh` takes care of creating independent job files and submitting them to KATAK.<br>
-<br>
 
 # 2. *De novo* assembly with Trinity #
 **Description**: takes the trimmed files, concatenates them (for better transcript detection) and assemble all the reads into transcripts.<br>
@@ -58,7 +57,11 @@ Each library will be trimmed independently according to the parameters entered i
 **Procedure**<br>
 * Again, script file can be changed according to your needs and data:<br>
 `vi 01_scripts/02.trinity.sh`
-<br>
+<br><br>
 **note**: you might want to check for file name concordance in the script to make sure the job does not crash.
 
-* 
+* Submit the task to KATAK:<br>
+`qsub 01_scripts/jobs/02.trinity.jobs.sh`<br>
+
+# 3. Aligning all libraries to Trinity output #
+
