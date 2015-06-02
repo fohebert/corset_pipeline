@@ -89,3 +89,5 @@ Each library will be trimmed independently according to the parameters entered i
 
 * Job can then be submitted to KATAK:<br>
 `qsub 01_scripts/jobs/04.corset.sh`<br>
+
+# 5. Run edgeR #
