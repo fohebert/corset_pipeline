@@ -47,5 +47,7 @@ You can edit the job file to change the running time, RAM, number of CPUS:<br>
 `vi 01_scripts/jobs/01.trimming.job.template.sh`
 
 You are now ready to submit the job to KATAK:<br>
-`qsub 01_scripts/jobs/`
+`qsub 01_scripts/01.trimming.sh`
 
+**NOTE**: usually, you should submit the jobs from the `01_scripts/jobs/` directory, but here, the script `01_scripts/01.trimming.sh` takes care of creating independent job files and submitting them to KATAK.<br>
+<br>
