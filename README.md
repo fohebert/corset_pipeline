@@ -35,5 +35,5 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 
 # 1. Read Trimming #
 ** Description **: cleans up read files according to sequencing quality thresholds and trims off sequencing adaptors.<br>
-<br>
-#### Steps ####
+
+** Procedure **<br>
