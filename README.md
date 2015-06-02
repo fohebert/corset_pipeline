@@ -1,5 +1,5 @@
-# corset_pipeline
-Pipeline used to produce a de novo transcriptome from different RNA-seq libraries
+# Assembly Pipeline from Illumina paired-end data
+*This pipline uses raw read files to trim and assemble RNA-seq data, while correcting for redundancy in the dataset*
 
 *** VERY IMPORTANT ***
 Raw read files have to conform to a very specific name format, but you can change
