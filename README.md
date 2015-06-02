@@ -2,6 +2,10 @@
 **NOTE**:
 *This pipline uses raw read files to trim and assemble RNA-seq data, while correcting for redundancy in the dataset*
 
+##Disclaimer##
+There pipeline works well for a specific type of data on a specific cluster at Laval University. You might have to
+change certain lines of code in order to make it work, depending on the type of data and the name of the files.
+
 *** VERY IMPORTANT ***
 Raw read files have to conform to a very specific name format, but you can change
 the code so that it fits with whatever name your read files have.
