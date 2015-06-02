@@ -53,3 +53,6 @@ Each library will be trimmed independently according to the parameters entered i
 <br>
 
 # 2. *De novo* assembly with Trinity #
+**Description**: takes the trimmed files, concatenates them (for better transcript detection) and assemble all the reads into transcripts.<br>
+
+**Procedure**<br>
