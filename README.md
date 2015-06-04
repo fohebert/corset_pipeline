@@ -98,3 +98,5 @@ Each library will be trimmed independently according to the parameters entered i
 
 # 5. Run edgeR #
 **Description**: this step will allow the identification of gene-level expression counts. EdgeR will allow the identification of top differentially expressed clusters.<br>
+<br>
+*Codes and explanations coming soon, still in development*
