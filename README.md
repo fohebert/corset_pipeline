@@ -30,13 +30,20 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 
 ## General Instructions Before Beginning ##
 * Run all the scripts (i.e. job files) from the main directory
-* Begin by placing your read files into the 02_raw_data directory
+* Begin by placing ALL of your read files into the 02_raw_data directory
+* Raw read files should have this naming system: **XXX.raw-reads.R1.fastq** & **XXX.raw-reads.R2.fastq** (paired-end data).
 * The job files are formatted according to the KATAK cluster requirements from Laval University (IBIS), but you can edit them to fit any other cluster.<br>
+
+## Important Notice ##
+This pipeline describes how to obtain a reference transcriptome AND levels of expression for different treatments.<br><br>
+To avoid allele spliting into different contigs during the assembly, it is recommended to use only 1 individual to produce the reference. However, if more than 1 developmental stage are sequenced (e.g. parasite with complex life-cycle), it is crucial to use 1 individual per developmental stage for the assembly in order to maximize transcript discovery.<br><br>
+So in this pipeline, ALL read files should be placed into the `02_raw_data` directory and when the Trinity assembly step is reached, only the best library of each developmental stage should be given as the input for Trinity (this will be explained when it's time to deal with Trinity).<br>
 
 # 1. Read Trimming #
 **Description**: cleans up read files according to sequencing quality thresholds and trims off sequencing adaptors.<br>
 
 **Procedure**<br>
+* **VERY IMPORTANT**: place the read files that will be used for the assembly in `03_trimmed/sp_assembly/`. These files should be 1 individual per developmental stage or treatment. Trinity will only assemble the reads contained in this sub-directory.
 * Script file for the job can edited using vim:<br>
 `vi 01_scripts/01.trimming.sh`
 <br><br>
