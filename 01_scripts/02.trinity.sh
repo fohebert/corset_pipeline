@@ -2,7 +2,7 @@
 # Assembling the trimmed data using Trinity
 
 #GLOBAL VARIABLES
-TRIMMED_READS="03_trimmed"
+TRIMMED_READS="03_trimmed/sp_assembly"
 TRIN_OUT="04_trinity_output"
 
 # Re-group all the reads for a better transcript detection
