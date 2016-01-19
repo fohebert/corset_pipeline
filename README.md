@@ -96,7 +96,7 @@ Each library will be trimmed independently according to the parameters entered i
 * Job can then be submitted to KATAK:<br>
 `qsub 01_scripts/jobs/04.corset.sh`<br>
 
-# 5. Run edgeR #
-**Description**: this step will allow the identification of gene-level expression counts. EdgeR will allow the identification of top differentially expressed clusters.<br>
+# 5. Run edgeR/limma-voom #
+**Description**: this step will allow the identification of gene-level expression counts. EdgeR or limma-voom will allow the identification of top differentially expressed clusters.<br>
 <br>
-*Codes and explanations coming soon, still in development*
+*At this point, it becomes dataset-specific. I followed the detailed instructions in the limma-voom package manual in order to identify the parameters that best suit my dataset.*
