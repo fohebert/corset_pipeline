@@ -99,4 +99,4 @@ Each library will be trimmed independently according to the parameters entered i
 # 5. Run edgeR/limma-voom #
 **Description**: this step will allow the identification of gene-level expression counts. EdgeR or limma-voom will allow the identification of top differentially expressed clusters.<br>
 <br>
-*At this point, it becomes dataset-specific. I followed the detailed instructions in the limma-voom package manual in order to identify the parameters that best suit my dataset.*
+*At this point, it becomes dataset-specific. I followed the detailed instructions in the limma-voom package manual in order to identify the parameters that best suit my dataset. I recommend doing the same with any dataset.*
