@@ -27,6 +27,7 @@ Feel free to use it, distribute it, but most of all, HAVE FUN WITH IT :-)
 * [CORSET] (https://github.com/Oshlack/Corset/wiki)
 * [Samtools] (http://www.htslib.org/)<br>
 * [edgeR] (http://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
+* [limma] (https://bioconductor.org/packages/release/bioc/html/limma.html)
 
 ## General Instructions Before Beginning ##
 * Run all the scripts (i.e. job files) from the main directory
